@@ -14,12 +14,6 @@
 IN_RAW_DIR = '~/path_to_input_00_raw_dir';
 OUT_ROOT_DIR = sprintf('~/path_to_generated_databases/%s',datestr(now,'yyyymmdd_HHMMSS'));
 
-% path validation
-check_input_dir_exists(IN_RAW_DIR,true);        %error if not present
-check_input_dir_exists(OUT_ROOT_DIR,false);     %error if present
-check_output_dir_exists(OUT_ROOT_DIR);          %creates empty folder
-
-
 % the required functions are in subdirectories with respect to this script
 % to avoid potential clashes make sure only default and local functions are
 % on the path
@@ -30,6 +24,11 @@ if isequal(input('Press y to continue...\n','s'),'y')
     addpath('src');
     addpath('src/dependencies/voicebox');
     addpath('src/dependencies/elobes');
+    
+    % path validation
+    check_input_dir_exists(IN_RAW_DIR,true);        %error if not present
+    check_input_dir_exists(OUT_ROOT_DIR,false);     %error if present
+    check_output_dir_exists(OUT_ROOT_DIR);          %creates empty folder
     
     % main directory used for derivative databases
     raw_db_dir = fullfile(OUT_ROOT_DIR,'00_raw');

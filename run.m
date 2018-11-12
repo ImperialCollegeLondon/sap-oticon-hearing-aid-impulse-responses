@@ -6,7 +6,7 @@
 % with DOI <>.
 % To avoid possible overwriting of data, the output directory must not already exist.
 % A new copy of the '00_raw' database is created which is then the data
-% from all other databases are derived
+% from which all other databases are derived
 %
 % Alastair Moore, October 2018
 

@@ -63,7 +63,7 @@ for isubject = 1:nSubject
     indata = load(fullfile(in_dir,'mat',sprintf('subject_%02d.mat',T.subj_id(isubject))));
 
     % remove the unneeded in-ear channels and rearrange to make left and right
-    % referecne channels appear on 1 and 2. This makes auditioning multichannel
+    % reference channels appear on 1 and 2. This makes auditioning multichannel
     % wav files as stereo much easier
     % channel order for indata.ha_hrir_0 is
     %  [FrontLeft BackLeft InEarLeft FrontRight BackRight InEarRight]

@@ -14,9 +14,8 @@ This work was supported by the Engineering 789 and Physical Sciences Research Co
 ````
 Version history
 
-0.1.0       2018-10-31       Provisional release to support manuscript review
-
-1.0.0       2019-05-03       First public release
+0.1.0       2018-10-31       Provisional pre-release to support manuscript review
+0.2.0       2019-05-03       First public release
                              - Added DOIs and provisional citation
                              - Improved documentation
 

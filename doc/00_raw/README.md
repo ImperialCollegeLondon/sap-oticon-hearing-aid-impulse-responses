@@ -1,15 +1,15 @@
 # Raw database
 
-This database contains the original hearing aid head related impulse responses and calibration measurements reported in "Personalized signal-independent beamforming for binaural hearing aids". It contains the following directories:
-
+This database contains the as-measured hearing aid head-related impulse responses and calibration measurements reported in "Personalized signal-independent beamforming for binaural hearing aids". It contains the following directories:
 ````
 mat: matlab .mat files containing the data   
 doc: documentation  
 ````
 
 ## mat
-The subject_%02d.mat files in this database provide the measured impulse responses without post processing so that other researchers are able to investigate alternative calibration/compensation methods according to their intended application. Each .mat file contains the following variables
+The subject_%02d.mat files in this database provide the measured impulse responses without post processing so that other researchers are able to investigate alternative calibration/compensation methods according to their intended application. N.B. hrir is used here in the generic sense - all measurements in this database *do* contain room reflections.
 
+Each .mat file contains the following variables
 ````matlab
 % hearing aid head-related impulse reponses when worn by subject
 % dimensions [nSamples nMic=6 nDOA=29]
@@ -17,7 +17,7 @@ The subject_%02d.mat files in this database provide the measured impulse respons
 % dimension 2 arranged as given in mic_channel_names
 % dimension 3 arranged as given in elevation: doa_elevation_deg, azimuth: doa_azimuth_deg
 
-ha_hrir_n0            % the subject-specific measurement with chair oriented towards the front loudspeaker
+ha_hrir_0             % the subject-specific measurement with chair oriented towards the front loudspeaker
 ha_hrir_n15           % chair rotated through yaw rotation of -15 degrees (i.e. towards the subject's right)
 ha_hrir_n30           % chair rotated through yaw rotation of -30 degrees (i.e. towards the subject's right)
 
@@ -62,13 +62,13 @@ front_arc             % measured from right front microphone around front of hea
 width                 % measured between sides of head (not including ears) in cm
 depth                 % measured from forehead to back of head in cm
 height                % measured from chin to top of head in cm
-SI_test               % boolean indicated that the subject took part in the speech intelligibitlity test
+SI_test               % boolean indicating that the subject took part in the speech intelligibitlity test
 in_ear_valid          % boolean indicating that the impulse responses measured for the InEarLeft and InEarRight microphones is valid. For subject 40 clipping of the recorded sweeps was observed, therefore this data should not be used. For simplicty of post processing the data is retained in the raw database and should be set to NaNs where appropriate.
 ````
 
 ## doc
 ````matlab
-coordinates_system.pdf:           % X is front, Y is left, Z is up. Positive azimuth and elevation indicated.
+coordinates_system.pdf            % X is front, Y is left, Z is up. Positive azimuth and elevation indicated.
 ha_on_hats_raw.pdf                % left ear view with microphone channels labeled and numbered  
 speaker_layout_schematic_raw.pdf  % directions of loudspeakers in degrees
 ````

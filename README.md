@@ -18,7 +18,7 @@ Version history
 0.2.0       2019-05-03       First public release
                              - Added DOIs and provisional citation
                              - Improved documentation
-0.2.1       2019-05-07       Updated README
-                             - Updated title to match database name
+1.0.0       2019-05-07       Version used for v1.0.0 database release on Zenodo
+                             - Updated README title to match database name
                              - Added DOI for code
 ````

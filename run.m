@@ -3,7 +3,7 @@
 %
 % This script must be edited with the appropriate paths for the user's
 % system. The required input data are the '00_raw' measurements published 
-% with DOI <>.
+% with DOI 10.5281/zenodo.2660782.
 % To avoid possible overwriting of data, the output directory must not already exist.
 % A new copy of the '00_raw' database is created which is then the data
 % from which all other databases are derived
